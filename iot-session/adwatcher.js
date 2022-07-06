@@ -33,7 +33,7 @@ board.on("ready", function() {
 // load blockchain
 function listenToBlockchain() {
     loadContract((contract)=>{
-        loadImageFromBlockchain(contract, adspaceid);
+        listenForSaleEvent(contract, adspaceid);
     });
 }
  
@@ -50,16 +50,28 @@ async function loadContract(cb) {
 }
  
 // update function
-async function loadImageFromBlockchain(contract, adspaceid) {
+async function listenForSaleEvent(contract, adspaceid) {
  
-    // load encoded image data from contract
-    var b64string = await contract.methods.adverts(adspaceid).call();
+    // contract event listener
+    contract.events.Sale().on('data', async function(event){
  
-    // decode image data and write image file
-    fs.writeFileSync('advert.png', Buffer.from(b64string, 'base64'));
+        // check for own events
+        if (event.returnValues._id == adspaceid) {
  
-    // update display
-    updateDisplay('advert.png',false);
+            // load encoded image data from contract
+            var b64string = await contract.methods.adverts(adspaceid).call();
+ 
+            // decode image data and write image file
+            fs.writeFileSync('advert.png', Buffer.from(b64string, 'base64'));
+ 
+            // update display
+            updateDisplay('advert.png',false);
+        }
+ 
+    // error handler
+    }).on('error', function(e){
+        console.log("Fehler: \n"+e);
+    });
 }
  
 // function update display
@@ -67,5 +79,6 @@ function updateDisplay(file,dither) {
     ptl(file,dither,function(e,b){
         oled.buffer = b;
         oled.update();
+        oled.invert();
     });
 }
