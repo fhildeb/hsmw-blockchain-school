@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  if loggedout==true
+    div Sie haben sich abgemeldet. Kehren Sie zur Startseite zurück.
+  else
+    div(id='info')
+    h1 Payed Content Demo
+    input(type='hidden' id='shash' value=shash size='64')
+  
+  if loggedin==true
+    input(type='hidden' id='user' value=user)
+
+    if hasChannel!==undefined
+      input(type='hidden' id='haschannel' value=hasChannel.address)
+      input(type='hidden' id='used' value=hasChannel.used)
+  
+    if payed==false
+      input(type='hidden' id='price' value=price)
+      div(id='payedcontent' style='border:2px solid;padding:10px') Content not yet payed.<br><br>
+        if hasChannel!==undefined
+          button(id='pay') Pay
+    else
+      input(type='hidden' id='price' value=price)
+      div(id='payedcontent' style='border:2px solid green;padding:10px') Payed!!<br><br>
+        if hasChannel!==undefined
+          button(id='pay') Pay
+
+  script(src="/javascripts/index_client.js")
+  script(src="/javascripts/channel_client.js")
