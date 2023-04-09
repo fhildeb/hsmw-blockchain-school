@@ -7,8 +7,3 @@ This session focuses on setting up and testing around with the Truffle framework
 - `contracts`: Smart Contracts
 - `migrations`: Deployment Scripts
 - `tests`: Test Scripts
-
-## External
-
-- [Truffle](https://trufflesuite.com/docs/truffle/)
-- [Ganache](https://trufflesuite.com/docs/ganache/)

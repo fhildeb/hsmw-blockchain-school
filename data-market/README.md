@@ -21,9 +21,3 @@ The web server, built using the Node.js delivers three pages, offering an overvi
 - `test_buy_method.js`: Tests the buy method of the DataMarket smart contract. It checks if the correct amount of Ether is sent, ensuring that the buyer's status is updated and that the contract balance and sender's account balance change accordingly. It also tests the behavior when an incorrect amount of Ether is sent.
 - `test_initialization.js`: Tests the initial state of the DataMarket smart contract, making sure that the variables are properly initialized, such as the description, URL, price, and contract owner.
 - `test_write_methods.js`: Tests the description method of the DataMarket smart contract. It verifies if the contract owner can successfully change the description and if a non-owner account is restricted from making any changes to the description.
-
-## External
-
-- [ExpressJS](https://expressjs.com/)
-- [Truffle Suite](https://trufflesuite.com/)
-- [NodeJS](https://nodejs.org/)

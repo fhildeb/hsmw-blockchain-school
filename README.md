@@ -35,3 +35,5 @@ WIP
 - [Arduino Libs](http://www.arduino.cc/en/Guide/Libraries)
 - [Johnny-Five](http://johnny-five.io/)
 - [Web3](https://web3js.readthedocs.io/en/v1.7.4/)
+- [ExpressJS](https://expressjs.com/)
+- [NodeJS](https://nodejs.org/)
