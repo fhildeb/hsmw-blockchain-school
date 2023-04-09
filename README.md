@@ -37,3 +37,4 @@ WIP
 - [Web3](https://web3js.readthedocs.io/en/v1.7.4/)
 - [ExpressJS](https://expressjs.com/)
 - [NodeJS](https://nodejs.org/)
+- [Pug](https://pugjs.org/api/getting-started.html)
