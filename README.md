@@ -20,9 +20,13 @@ The Blockchain School is an event for education and training in the field of Blo
 
 ## Repository Contents
 
-```
-WIP
-```
+- `basic-sol-contracts`: Solidity Starter Contracts
+- `data-market-dapp`: Paid & Reveal Content System
+- `iot-blockwatcher`: State-Based Advertiser on Arduino
+- `micro-payments-dapp`: Off-Chain Payment Channels
+- `payment-channel-dapp`: Solidity-Based Payment Channels
+- `token-viewer-dapp`: Wallet Connection & Queries
+- `truffle-debug`: Truffle & Ganache Contract Setup
 
 ## Tools
 
