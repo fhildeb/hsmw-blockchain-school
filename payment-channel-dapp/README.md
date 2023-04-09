@@ -8,7 +8,7 @@ Tickets form the basis for payment channels. Once connected to MetaMask, the use
 
 ## Smart Contract
 
-> File: `contracts/PaymentChannel.sol`
+> File: `PaymentChannel.sol`
 
 The contract is an implementation of a unidirectional off-chain payment channel between two parties, a channel sender and a channel recipient. When the contract is created, the sender specifies the recipient, a timeout duration, and deposits funds into the contract.
 
