@@ -31,8 +31,9 @@ import {
     TransferTransaction,
     UInt64,
     XEM,
+    //@ts-ignore
   } from "nem2-sdk";
-  
+  //@ts-ignore
   import { filter, mergeMap } from "rxjs/operators";
   
   // 01 - Setup

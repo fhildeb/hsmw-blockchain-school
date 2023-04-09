@@ -27,6 +27,7 @@ import {
     NetworkType,
     TransactionHttp,
     UInt64,
+    //@ts-ignore
   } from "nem2-sdk";
   
   // 01 - Setup

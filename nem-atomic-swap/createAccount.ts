@@ -15,7 +15,7 @@
  * limitations under the License.
  *
  */
-
+//@ts-ignore
 import { Account, NetworkType } from "nem2-sdk";
 
 const account = Account.generateNewAccount(NetworkType.MIJIN_TEST);

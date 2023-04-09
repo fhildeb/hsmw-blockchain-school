@@ -28,7 +28,9 @@ import {
     TransactionHttp,
     TransferTransaction,
     XEM,
+    //@ts-ignore
   } from "nem2-sdk";
+  //@ts-ignore
   import { filter, map, mergeMap } from "rxjs/operators";
   
   const validTransaction = (

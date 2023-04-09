@@ -23,6 +23,7 @@ import {
     RegisterNamespaceTransaction,
     TransactionHttp,
     UInt64,
+    //@ts-ignore
   } from "nem2-sdk";
   
   const transactionHttp = new TransactionHttp("http://94.130.186.228:3000");
