@@ -1,14 +1,10 @@
 # Payment Channel dApp
 
-The project is an Ethereum-based payment channel dApp.
-
-When the user visits the website, they will be prompted to connect their MetaMask account to the dApp.
-
-The project uses the ABI (Application Binary Interface) and contract address to interact with the payment channel on the Ethereum testnetwork through Infura. The smart contract includes functions to create and close the channel, pay the recipient, as well as to check the status and details. Everything is handled directly onchain. An alternative can be found within the micro payments dApp.
+The project is an Ethereum-based payment channel dApp interacting with the Ethereum testnetwork through Infura. Within the payment channel, participants can lock-in and trade tokens for a certain time period. The smart contract includes functions to create and close the channel, pay the recipient, as well as to check the status and details. Everything is handled directly onchain. An alternative can be found within the micro payments dApp.
 
 ## Payment Channel Tickets
 
-Once connected to MetaMask, the user can create a signed ticket including the hash of the value being sent, the signature, and the value in Wei. Tickets form the basis for payment channels. They can be seen as withdrawal permissions to guarantee the recipient that he or she can get money from the payment channel without having to carry out a paid transaction on the blockchain.
+Tickets form the basis for payment channels. Once connected to MetaMask, the user can create a signed ticket including the hash of the value being sent, the signature, and the value in Wei. Tickets can be seen as withdrawal permissions to guarantee the recipient that he can get money from the payment channel without having to carry out a paid transaction on the blockchain.
 
 ## Smart Contract
 
