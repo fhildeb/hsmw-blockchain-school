@@ -1,256 +1,140 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-  
 var Web3JS = require("web3");
-var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/9a801a369ed247dfb3c9f0079a894e5b"));
-  
+var web3 = new Web3JS(
+  new Web3JS.providers.HttpProvider(
+    "https://ropsten.infura.io/<infura-api-key>"
+  )
+);
 var abi = [
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_spender",
-                "type": "address"
-            },
-            {
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "approve",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "transfer",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_from",
-                "type": "address"
-            },
-            {
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "transferFrom",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "name": "_initialSupply",
-                "type": "uint256"
-            },
-            {
-                "name": "_name",
-                "type": "string"
-            },
-            {
-                "name": "_symbol",
-                "type": "string"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "name": "_from",
-                "type": "address"
-            },
-            {
-                "indexed": true,
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "Transfer",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "name": "_owner",
-                "type": "address"
-            },
-            {
-                "indexed": true,
-                "name": "_spender",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "Approval",
-        "type": "event"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "",
-                "type": "address"
-            },
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "allowance",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "balanceOf",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "name",
-        "outputs": [
-            {
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "symbol",
-        "outputs": [
-            {
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "totalSupply",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    }
+  {
+    constant: false,
+    inputs: [],
+    name: "closeChannel",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    constant: false,
+    inputs: [
+      { name: "_h", type: "bytes32" },
+      { name: "_v", type: "uint8" },
+      { name: "_r", type: "bytes32" },
+      { name: "_s", type: "bytes32" },
+      { name: "_value", type: "uint256" },
+    ],
+    name: "payRecipient",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { name: "_to", type: "address" },
+      { name: "_timeout", type: "uint256" },
+    ],
+    payable: true,
+    stateMutability: "payable",
+    type: "constructor",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "channelRecipient",
+    outputs: [{ name: "", type: "address" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "channelSender",
+    outputs: [{ name: "", type: "address" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "channelTimeout",
+    outputs: [{ name: "", type: "uint256" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [
+      { name: "_h", type: "bytes32" },
+      { name: "_v", type: "uint8" },
+      { name: "_r", type: "bytes32" },
+      { name: "_s", type: "bytes32" },
+      { name: "_value", type: "uint256" },
+    ],
+    name: "checkTicket",
+    outputs: [{ name: "", type: "bool" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    constant: true,
+    inputs: [],
+    name: "startDate",
+    outputs: [{ name: "", type: "uint256" }],
+    payable: false,
+    stateMutability: "view",
+    type: "function",
+  },
 ];
-  
-var tokenAdress = '0x1225446678163b14859eed119831a68576fc15ae';
-var token = new web3.eth.Contract(abi, tokenAdress);
-  
+var address = "0x...";
+var pc = new web3.eth.Contract(abi, address);
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  
-  var blk;
-  var tkn;
-  
-  web3.eth.getBlockNumber().then(function(blocknumber){
-    blk = blocknumber;
-    return token.methods.name().call();
-  })
-  .then(function(name){
-    tkn = name;
-  })
-  .then(function(){
-    res.render('index', { title: 'Hello World', block : blk, tokenname : tkn });
-  })
-  .catch(function(error){
-    console.log(error);
-    res.render('index', { title: 'Hello World', block : 'konnte Block nicht laden'});
-  });
-  
+router.get("/", function (req, res, next) {
+  var balance;
+  var recipient;
+  var sender;
+  var start;
+  var timeout;
+  var amount;
+  web3.eth
+    .getBalance(address)
+    .then(function (_balance) {
+      balance = web3.utils.fromWei(_balance, "Finney");
+      return pc.methods.startDate().call();
+    })
+    .then(function (_start) {
+      start = _start;
+      return pc.methods.channelSender().call();
+    })
+    .then(function (_sender) {
+      sender = _sender;
+      return pc.methods.channelRecipient().call();
+    })
+    .then(function (_recipient) {
+      recipient = _recipient;
+      return pc.methods.channelTimeout().call();
+    })
+    .then(function (_timeout) {
+      timeout = _timeout;
+      res.render("index", {
+        title: "Paymentchannel Demo",
+        e: null,
+        recipient: recipient,
+        sender: sender,
+        start: start,
+        timeout: timeout,
+        balance: balance,
+      });
+    })
+    .catch(function (error) {
+      console.log("E");
+      res.render("index", { title: "Paymentchannel Demo", e: error });
+    });
 });
-  
 module.exports = router;

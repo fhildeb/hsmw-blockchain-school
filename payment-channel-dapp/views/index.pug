@@ -1,11 +1,20 @@
 extends layout
- 
 block content
- 
   h1= title
-  div Aktueller Block: #{block}
-  div Token Name: #{tokenname}
-  br
+  div Payment Channel Daten
+  hr
+  div ChannelBalance: #{balance} Finney
+  div ChannelRecipient: #{recipient}
+  div ChannelSender: #{sender}
+  div ChannelStart: #{start}
+  div ChannelTimeout: #{timeout}
+  div Fehler: #{e}
+  hr
   div(id='info')
- 
-  script(src="/javascripts/clientscript.js")
+  hr
+  h3 Abhebeerlaubniss:
+  div Betrag in Finney:
+    input(id='value' type='text')
+  div
+    input(id='createSig' type='button' value='Signiere Abhebeerlaubniss')
+  div(id='ticketinfo')
