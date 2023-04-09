@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+    // TODO: Recipient has to be admin account address
     var recipient = "0x...";
     var channelSizeInFinney = "10";
     

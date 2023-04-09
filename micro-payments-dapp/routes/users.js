@@ -6,8 +6,10 @@ var PS = require("./ps");
 var ps = new PS();
 
 var router = express.Router();
+// generate session
 router.use(session({secret: 'secret'}));
 
+// TODO: Add admin account address
 var admin = '0x...';
 
 /* GET home page. */

@@ -7,6 +7,7 @@ const eutils = require('ethereumjs-util');
 const adapter = new FileSync('db.json');
 const db = low(adapter);
 
+// TODO: Add infura key
 var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/<infura-api-key>"));
 var channel = new Channel();
 
