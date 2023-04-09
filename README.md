@@ -38,3 +38,4 @@ WIP
 - [ExpressJS](https://expressjs.com/)
 - [NodeJS](https://nodejs.org/)
 - [Pug](https://pugjs.org/api/getting-started.html)
+- [jQuery](https://jquery.com/)

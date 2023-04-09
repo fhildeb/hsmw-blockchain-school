@@ -1,9 +1,21 @@
 # Payment Channel dApp
 
-A basic Express web application using the Pug template engine to enable efficient Ethereum micropayments.
+The project is an Ethereum-based payment channel dApp.
 
-This project utilizes on payment channels for content access control. It allows users to access specific content on a website by opening a payment channel with the content provider and signing off transactions within the channel. The system uses MetaMask as a browser plugin to interact with the Ethereum blockchain, enabling users to open channels, sign transactions, and make payments. The backend handles channel management, content pricing, and tracking user payments. Users can log in using their Ethereum addresses and access content after paying the required amount. The payment channels can be closed by the recipient (content provider) once the channel balance is confirmed.
+When the user visits the website, they will be prompted to connect their MetaMask account to the dApp.
+
+The project uses the ABI (Application Binary Interface) and contract address to interact with the payment channel on the Ethereum testnetwork through Infura. The smart contract includes functions to create and close the channel, pay the recipient, as well as to check the status and details.
 
 ## Payment Channel Tickets
 
-Tickets form the basis for payment channels. These withdrawal permissions guarantee the recipient that he or she can get money from the payment channel without having to carry out a paid transaction on the blockchain.
+Once connected to MetaMask, the user can create a signed ticket including the hash of the value being sent, the signature, and the value in Wei. Tickets form the basis for payment channels. They can be seen as withdrawal permissions to guarantee the recipient that he or she can get money from the payment channel without having to carry out a paid transaction on the blockchain.
+
+## Smart Contract
+
+> File: `contracts/PaymentChannel.sol`
+
+The contract is an implementation of a unidirectional off-chain payment channel between two parties, a channel sender and a channel recipient. When the contract is created, the sender specifies the recipient, a timeout duration, and deposits funds into the contract.
+
+The contract provides ticket checks, which verify the messages, funds, and signatures associated with a payment. It also allows the channel recipient to claim a payment. The recipient must provide a valid signed message, along with the value being transferred. If the ticket check returns true, the contract transfers the specified amount to the channel recipient, then closes the channel and sends any remaining funds back to the channel sender.
+
+Finally the channel sender is able to close the channel if the timeout duration has passed. It ensures that only the channel sender can close the channel and that the timeout condition is met. When the channel is closed, any remaining funds are sent back to the channel sender.

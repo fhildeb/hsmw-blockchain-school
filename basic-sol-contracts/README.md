@@ -14,11 +14,3 @@
 ## ERC20
 
 - `FelixToken.sol`: Implementation of a basic ERC-20 token. The contract has functions for transferring tokens between addresses, approving an address to spend tokens on behalf of the token owner, and checking allowances. The contract also has events for token transfers and approvals. The constructor initializes the token's name, symbol, and total supply and assigns the entire initial supply to the contract's creator.
-
-## Payment Channel
-
-Implementation of a unidirectional off-chain payment channel between two parties, a channel sender and a channel recipient. When the contract is created, the sender specifies the recipient, a timeout duration, and deposits funds into the contract.
-
-The contract provides ticket checks, which verify the messages, funds, and signatures associated with a payment. It also allows the channel recipient to claim a payment. The recipient must provide a valid signed message, along with the value being transferred. If the ticket check returns true, the contract transfers the specified amount to the channel recipient, then closes the channel and sends any remaining funds back to the channel sender.
-
-Finally the channel sender is able to close the channel if the timeout duration has passed. It ensures that only the channel sender can close the channel and that the timeout condition is met. When the channel is closed, any remaining funds are sent back to the channel sender.

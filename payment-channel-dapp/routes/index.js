@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var Web3JS = require("web3");
 var web3 = new Web3JS(
+//TODO: Adjust Infura Key
   new Web3JS.providers.HttpProvider(
     "https://ropsten.infura.io/<infura-api-key>"
   )
@@ -92,6 +93,7 @@ var abi = [
     type: "function",
   },
 ];
+//TODO: Ajust Address
 var address = "0x...";
 var pc = new web3.eth.Contract(abi, address);
 /* GET home page. */
