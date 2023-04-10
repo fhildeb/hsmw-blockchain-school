@@ -22,7 +22,9 @@ The Blockchain School is an event for education and training in the field of Blo
 
 - `basic-sol-contracts`: Solidity Starter Contracts
 - `data-market-dapp`: Paid & Reveal Content System
-- `iot-blockwatcher`: State-Based Advertiser on Arduino
+- `iot-arduino-session`: IoT Blockchain Integration
+  - Smart Contract Advertising
+  - Ethereum Block Monitor
 - `micro-payments-dapp`: Off-Chain Payment Channels
 - `payment-channel-dapp`: Solidity-Based Payment Channels
 - `token-viewer-dapp`: Wallet Connection & Queries
@@ -33,6 +35,7 @@ The Blockchain School is an event for education and training in the field of Blo
 - IoT: [Arduino](https://www.arduino.cc/education)
 - Testing: [Truffle](https://trufflesuite.com/)
 - BC Data: [Infura](https://infura.io/)
+- Solidity IDE: [REMIX](https://remix-project.org/)
 
 ## Libraries
 
