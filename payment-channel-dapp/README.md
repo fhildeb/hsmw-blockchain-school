@@ -33,14 +33,15 @@ Search for `TODO:` and adjust:
 
 ### Installation
 
+### Installation
+
 ```bash
 # Installs all packages
 npm i
 
 # Start script running node on/bin/www
 npm start
+
+# View on Web
+# http://localhost:3000/
 ```
-
-### View on Web
-
-Open http://localhost:3000/
