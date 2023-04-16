@@ -34,7 +34,7 @@ The Blockchain School is an event for education and training in the field of Blo
 
 - IoT: [Arduino](https://www.arduino.cc/education)
 - Testing: [Truffle](https://trufflesuite.com/)
-- BC Data: [Infura](https://infura.io/)
+- Blockchain API: [Infura](https://infura.io/)
 - Solidity IDE: [REMIX](https://remix-project.org/)
 
 ## Libraries
