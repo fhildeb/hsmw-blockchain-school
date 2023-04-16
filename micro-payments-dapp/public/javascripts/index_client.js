@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // TODO: Recipient has to be admin account address
-    var recipient = "0x...";
+    var recipient = "0x0000000000000000000000000000000000000000";
     var channelSizeInFinney = "10";
     
     // checks if meta mask is working fine

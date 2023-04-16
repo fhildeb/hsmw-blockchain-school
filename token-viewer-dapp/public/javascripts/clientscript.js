@@ -223,7 +223,7 @@ window.onload = function (e) {
     ];
   
     // TODO: Change token address to specific one
-    var tokenAdress = "0x1225446678163b14859eed119831a68576fc15ae";
+    var tokenAdress = "0x0000000000000000000000000000000000000000";
     var infoDiv = document.getElementById("info");
     var account;
   

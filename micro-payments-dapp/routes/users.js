@@ -10,7 +10,7 @@ var router = express.Router();
 router.use(session({secret: 'secret'}));
 
 // TODO: Add admin account address
-var admin = '0x...';
+var admin = '0x0000000000000000000000000000000000000000';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
