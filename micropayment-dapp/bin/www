@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('micro-payments-dapp:server');
+var debug = require('debug')('micropayments-dapp:server');
 var http = require('http');
 
 /**

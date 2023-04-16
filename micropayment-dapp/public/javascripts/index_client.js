@@ -65,7 +65,7 @@ $(document).ready(function () {
       // show create paymentchannel button if not yet available
       if ($('#haschannel').length == 0) {
         $('#info').append(
-          '&nbsp;&nbsp;&nbsp;<button id="createPc">Open Payment Channel</button>',
+          '&nbsp;&nbsp;&nbsp;<br><button id="createPc">Open Payment Channel</button>',
         );
         $('#createPc').on('click', function () {
           createPaymentChannel();

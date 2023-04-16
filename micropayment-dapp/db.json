@@ -1,0 +1,16 @@
+{
+  "content": {
+    "c_1": {
+      "price": "1",
+      "0x87E01F75d7aC18D6afeBA63192B6CBeB391a57A8": true
+    }
+  },
+  "channels": {
+    "0x87E01F75d7aC18D6afeBA63192B6CBeB391a57A8": {
+      "address": "0xa1Dd3De5E7fe1aF57832224C88DfB6378456d15B",
+      "value": "10",
+      "used": "2",
+      "sig": "0xa9e7f5c6384fd1221decdc5a1c507984fbe483376bad4c991fd49865a3a06a052861c3fc88b87e051f4eb496d3be0b4d50f3a65dd8794a5a57dab2fea2ef6caa1b"
+    }
+  }
+}

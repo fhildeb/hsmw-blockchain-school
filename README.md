@@ -25,7 +25,7 @@ The Blockchain School is an event for education and training in the field of Blo
 - [`iot-arduino-session`](/iot-arduino-session/): IoT Blockchain Integration
   - Smart Contract Advertising
   - Ethereum Block Monitor
-- [`micro-payments-dapp`](/micro-payments-dapp/): Off-Chain Payment Channels
+- [`micropayments-dapp`](/micropayments-dapp/): Off-Chain Payment Channels
 - [`payment-channel-dapp`](/payment-channel-dapp/): Solidity-Based Payment Channels
 - [`token-viewer-dapp`](/token-viewer-dapp/): Wallet Connection & Queries
 - [`truffle-debug`](/truffle-debug/): Truffle & Ganache Contract Setup

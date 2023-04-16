@@ -1,8 +1,8 @@
-# Ethereum Micropayments dApp
+# Micropayment Channel dApp
 
-This project is a micro-payment system utilizing Ethereum payment channels for content access control. It allows users to access specific content on a website by opening a payment channel with the content provider and signing off transactions within the channel.
+This project is a micropayment system utilizing Ethereum payment channels for content access control. It allows users to access specific content on a website by opening a payment channel with the content provider and signing off transactions within the channel.
 
-![Micro Channel Payments 1](/img/micro-payments-dapp-1.png)
+![Micro Channel Payments 1](/img/micropayment-dapp-1.png)
 
 ## Description
 
@@ -14,13 +14,13 @@ Users can log in using their Ethereum addresses and access content after paying 
 
 Users can open payment channels and make signatures to the database while signing with their Ethereum accounts.
 
-![Micro Channel Payments 2](/img/micro-payments-dapp-2.png)
+![Micro Channel Payments 2](/img/micropayment-dapp-2.png)
 
 ### Admin Panel
 
 Admins can check the signatures of the payment channels and close them if wanted.
 
-![Micro Channel Payments 3](/img/micro-payments-dapp-3.png)
+![Micro Channel Payments 3](/img/micropayment-dapp-3.png)
 
 ## Off-Chain Data Storage
 
