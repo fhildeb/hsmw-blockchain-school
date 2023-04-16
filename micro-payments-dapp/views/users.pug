@@ -9,7 +9,7 @@ block content
     input(type='hidden' id='shash' value=shash)
 
     if loggedin
-      h3 Admin is loggedin.
+      h3 Admin is logged in.
 
       h4 Open Channels
 
@@ -38,7 +38,7 @@ block content
                 if index2 == 'sig'
                   td
                     input(type='hidden' id= index2+'_'+n value= val2)
-                    button(id='checkSigButton_'+n) CheckSig
+                    button(id='checkSigButton_'+n) Check Sig
                   td
                     button(id='payRecipientButton_'+n) Close Channel
 
