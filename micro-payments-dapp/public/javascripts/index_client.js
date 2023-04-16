@@ -1,6 +1,7 @@
 $(document).ready(function () {
   // TODO: Recipient has to be admin account address
-  var recipient = '0x0000000000000000000000000000000000000000';
+  // Add your admind address from MetaMask
+  var recipient = '0x87E01F75d7aC18D6afeBA63192B6CBeB391a57A8';
   var channelSizeInFinney = '10';
 
   // checks if meta mask is working fine
@@ -14,21 +15,22 @@ $(document).ready(function () {
         $('#info').html(account);
         checkLogin();
         // reload page if account or network changes
-        web3.currentProvider.publicConfigStore.on('update', (obj) => {
-          if (obj.selectedAddress !== account.toLowerCase()) {
-            window.location.href = 'http://localhost:3000?l=true';
-          }
-        });
+        if (
+          web3.currentProvider.publicConfigStore &&
+          typeof web3.currentProvider.publicConfigStore.on === 'function'
+        ) {
+          web3.currentProvider.publicConfigStore.on('update', (obj) => {
+            if (obj.selectedAddress !== account.toLowerCase()) {
+              window.location.href = 'http://localhost:3000?l=true';
+            }
+          });
+        }
       } else {
         $('#info').html(
           '<span style="color:red">Melden Sie sich in Meta Mask an.</span>',
         );
       }
     });
-  } else {
-    $('#info').html(
-      '<span style="color:red">Installieren Sie bitte das Meta Mask Plugin.</span>',
-    );
   }
 
   // checks if the user is not logged in, shows the login button
@@ -39,20 +41,26 @@ $(document).ready(function () {
       $('#shash').length > 0 &&
       $('#user').val() !== account
     ) {
-      $('#info').append('&nbsp;&nbsp;&nbsp;<button id="login">Login</button>');
+      $('#info').append(
+        '&nbsp;&nbsp;&nbsp;<br><br><button id="login">Login</button><br>',
+      );
       $('#login').on('click', function () {
-        var shash = $('#shash').val();
-        web3.eth.personal.sign(shash, account).then(function (sig) {
-          console.log(shash);
-          console.log(sig);
-          window.location.href =
-            'http://localhost:3000?s=' + sig + '&a=' + account;
-        });
+        try {
+          var shash = $('#shash').val();
+          web3.eth.personal.sign(shash, account).then(function (sig) {
+            console.log(shash);
+            console.log(sig);
+            window.location.href =
+              'http://localhost:3000?s=' + sig + '&a=' + account;
+          });
+        } catch (error) {
+          console.log(error);
+        }
       });
 
       // if user is logged in
     } else if ($('#user').val() == account) {
-      $('#info').append('&nbsp;&nbsp;&nbsp;<b>Logged In</b>');
+      $('#info').append('&nbsp;&nbsp;&nbsp;<br><b>Logged In</b><br>');
 
       // show create paymentchannel button if not yet available
       if ($('#haschannel').length == 0) {
@@ -64,7 +72,9 @@ $(document).ready(function () {
         });
       } else {
         $('#info').append(
-          '&nbsp;&nbsp;&nbsp;<b>ChannelId:' + $('#haschannel').val() + '</b>',
+          '&nbsp;&nbsp;&nbsp;<br><b>ChannelId:' +
+            $('#haschannel').val() +
+            '</b><br>',
         );
       }
 

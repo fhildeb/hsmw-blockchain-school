@@ -4,7 +4,7 @@ var Web3JS = require('web3');
 var web3 = new Web3JS(
   // TODO: Adjust Infura Key
   new Web3JS.providers.HttpProvider(
-    'https://ropsten.infura.io/<infura-api-key>',
+    'https://goerli.infura.io/v3/<infura-key>',
   ),
 );
 var abi = [

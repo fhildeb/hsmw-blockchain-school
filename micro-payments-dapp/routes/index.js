@@ -42,7 +42,7 @@ router.get('/', async function (req, res, next) {
         sigvals = eutils.fromRpcSig(req.query.s);
         prefixedMsg = eutils.keccak(
           Buffer.concat([
-            eutils.toBuffer('\x19Ethereum Signed Message:\n32'),
+            Buffer.from('\x19Ethereum Signed Message:\n32', 'utf8'),
             eutils.toBuffer(shash),
           ]),
         );

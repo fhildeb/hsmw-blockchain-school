@@ -9,8 +9,8 @@ var router = express.Router();
 // generate session
 router.use(session({ secret: 'secret' }));
 
-// TODO: Add admin account address
-var admin = '0x0000000000000000000000000000000000000000';
+// TODO: Add your admin account address from MetaMask
+var admin = '0x87E01F75d7aC18D6afeBA63192B6CBeB391a57A8';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -36,7 +36,7 @@ router.get('/', function (req, res, next) {
         sigvals = eutils.fromRpcSig(req.query.s);
         prefixedMsg = eutils.keccak(
           Buffer.concat([
-            eutils.toBuffer('\x19Ethereum Signed Message:\n32'),
+            Buffer.from('\x19Ethereum Signed Message:\n32', 'utf8'),
             eutils.toBuffer(shash),
           ]),
         );

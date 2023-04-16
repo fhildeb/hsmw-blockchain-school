@@ -10,7 +10,7 @@ const db = low(adapter);
 // TODO: Add infura key
 var web3 = new Web3JS(
   new Web3JS.providers.HttpProvider(
-    'https://ropsten.infura.io/<infura-api-key>',
+    'https://goerli.infura.io/v3/<infura-key>',
   ),
 );
 var channel = new Channel();

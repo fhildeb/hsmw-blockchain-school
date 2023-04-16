@@ -28,7 +28,7 @@ block content
 
                 if index2 == 'address'
                   td
-                    a(href='https://ropsten.etherscan.io/address/' + val2 target='_blank')= val2
+                    a(href='https://goerli.etherscan.io/address/' + val2 target='_blank')= val2
                     input(type='hidden' id= index2+'_'+n value= val2)
 
                 if index2 == 'value' || index2 == 'used'
@@ -40,7 +40,7 @@ block content
                     input(type='hidden' id= index2+'_'+n value= val2)
                     button(id='checkSigButton_'+n) CheckSig
                   td
-                    button(id='payRecipientButton_'+n) CloseChannel
+                    button(id='payRecipientButton_'+n) Close Channel
 
             input(type='hidden' id= 'sender_'+n value= index)
         input(type='hidden' id='noChannels' value=n)
@@ -57,7 +57,7 @@ block content
               each val2, index2 in val1
                 if index2 == 'address'
                   td
-                    a(href='https://ropsten.etherscan.io/address/' + val2 target='_blank')= val2
+                    a(href='https://goerli.etherscan.io/address/' + val2 target='_blank')= val2
                 if index2 == 'used'
                   td= val2
 

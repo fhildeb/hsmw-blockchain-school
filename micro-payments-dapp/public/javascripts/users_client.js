@@ -9,11 +9,16 @@ $(document).ready(function () {
         account = accounts[0];
         $('#info').html(account);
         // reload page if account or network changes
-        web3.currentProvider.publicConfigStore.on('update', (obj) => {
-          if (obj.selectedAddress !== account.toLowerCase()) {
-            window.location.href = 'http://localhost:3000/users?l=true';
-          }
-        });
+        if (
+          web3.currentProvider.publicConfigStore &&
+          typeof web3.currentProvider.publicConfigStore.on === 'function'
+        ) {
+          web3.currentProvider.publicConfigStore.on('update', (obj) => {
+            if (obj.selectedAddress !== account.toLowerCase()) {
+              window.location.href = 'http://localhost:3000/users?l=true';
+            }
+          });
+        }
       } else {
         $('#info').html(
           '<span style="color:red">Melden Sie sich in Meta Mask an.</span>',
