@@ -5,10 +5,11 @@ var OledJs = require('oled-js');
 var ptl = require('png-to-lcd');
 var font = require('oled-font-5x7');
 
-const adspaceid = '0x47EB4a2f88e6D2580259FFe71c063Cff0918Fc6a';
+// TODO: Change to own MetaMask Address 
+const adspaceid = '0x87E01F75d7aC18D6afeBA63192B6CBeB391a57A8';
 
 var web3ws = new Web3JS(
-  new Web3JS.providers.WebsocketProvider('wss://ropsten.infura.io/ws'),
+  new Web3JS.providers.WebsocketProvider('wss://goerli.infura.io/ws'),
 );
 var oled;
 

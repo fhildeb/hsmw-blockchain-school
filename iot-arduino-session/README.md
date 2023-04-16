@@ -2,9 +2,12 @@
 
 This project involves scripts that can run on a small Internet of Things (IoT) device using an Arduino Nano Microcontroller and an OLED display. The IoT device will interact with the Ethereum Ropsten testnet, showcasing the integration of blockchain technology with embedded hardware.
 
+![Arduino Picture](/img/iot-arduino-session.png)
+_[Arduino Nano OLED Connect]_
+
 ## Setup and Tests
 
-he Arduino is a versatile, open-source microcontroller platform that can interact with various electronic components. The included firmware named `StandardFirmataPlus.ino` is used to flash the microcontroller which allows users to control the Arduino using JavaScript through the Johnny-Five library.
+The Arduino is a versatile, open-source microcontroller platform that can interact with various electronic components. The included firmware named `StandardFirmataPlus.ino` is used to flash the microcontroller which allows users to control the Arduino using JavaScript through the Johnny-Five library.
 
 ### LED Blink Test
 
@@ -51,3 +54,10 @@ The contract maintains mappings for adverts, prices, balances, and ad spaces, an
 The ad watcher itself just connects to the smart contract on Ropsten and listens for all sale events emitted by the Adplace. Upon detecting a relevant event, it retrieves the base64-encoded image data associated with the advertisement, decodes it, and writes it to a file. The program then updates the OLED display with the newly uploaded advertisement image.
 
 It utilizes the Johnny-Five library for Arduino communication, the Web3 library for blockchain interaction, and the png-to-lcd library for image conversion to such a small OLED pixel screen.
+
+## Development
+
+1. Search for `TODO:` within the project and exchange your MetaMask address
+2. Install dependencies using `npm i` within the `iot-arduino-session` folder
+
+[arduino nano oled connect]: (http://arduino-er.blogspot.com/2015/04/walking-bitmap-on-096-inch-128x64-i2c.html)
