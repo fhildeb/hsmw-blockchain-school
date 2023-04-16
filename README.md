@@ -46,3 +46,5 @@ The Blockchain School is an event for education and training in the field of Blo
 - [NodeJS](https://nodejs.org/)
 - [Pug](https://pugjs.org/api/getting-started.html)
 - [jQuery](https://jquery.com/)
+- [Ganache](https://trufflesuite.com/ganache/)
+- [Truffle](https://trufflesuite.com/truffle/)
