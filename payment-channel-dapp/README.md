@@ -1,4 +1,4 @@
-# Payment Channel dApp
+# Unidirectional Payment Channel dApp
 
 The project is an Ethereum-based payment channel dApp interacting with the Ethereum testnetwork through Infura. Within the payment channel, participants can lock-in and trade tokens for a certain time period. The smart contract includes functions to create and close the channel, pay the recipient, as well as to check the status and details. Everything is handled directly onchain. An alternative can be found within the micro payments dApp.
 
