@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
   
 var Web3JS = require("web3");
-var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/9a801a369ed247dfb3c9f0079a894e5b"));
+// TODO:; Add Infura API Key
+var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/<infura-key>"));
   
 var abi = [
     {
@@ -226,8 +227,9 @@ var abi = [
         "type": "function"
     }
 ];
-  
-var tokenAdress = '0x1225446678163b14859eed119831a68576fc15ae';
+
+// TODO: Chance Data Market Contract Address
+var tokenAdress = '0x0000000000000000000000000000000000000000';
 var token = new web3.eth.Contract(abi, tokenAdress);
   
 /* GET home page. */
@@ -244,11 +246,11 @@ router.get('/', function(req, res, next) {
     tkn = name;
   })
   .then(function(){
-    res.render('index', { title: 'Hello World', block : blk, tokenname : tkn });
+    res.render('index', { title: 'Simple Data Market', block : blk, tokenname : tkn });
   })
   .catch(function(error){
     console.log(error);
-    res.render('index', { title: 'Hello World', block : 'konnte Block nicht laden'});
+    res.render('index', { title: 'Simple Data Market', block : 'konnte Block nicht laden'});
   });
   
 });

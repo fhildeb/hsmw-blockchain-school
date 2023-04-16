@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
   
 var Web3JS = require("web3");
-var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/9a801a369ed247dfb3c9f0079a894e5b"));
+// TODO:; Add Infura API Key
+var web3 = new Web3JS(new Web3JS.providers.HttpProvider("https://ropsten.infura.io/<infura-key>"));
   
 var abi = [
     {
@@ -244,11 +245,11 @@ router.get('/', function(req, res, next) {
     tkn = name;
   })
   .then(function(){
-    res.render('index', { title: 'Hello World', block : blk, tokenname : tkn });
+    res.render('index', { title: 'Secure Data Market', block : blk, tokenname : tkn });
   })
   .catch(function(error){
     console.log(error);
-    res.render('index', { title: 'Hello World', block : 'konnte Block nicht laden'});
+    res.render('index', { title: 'Secure Data Market', block : 'konnte Block nicht laden'});
   });
   
 });

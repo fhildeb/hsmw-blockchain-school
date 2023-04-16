@@ -5,7 +5,7 @@ async function dapp() {
     // check if web 3 is available
     if (typeof web3 == "undefined") {
       $("#content").html(
-        "Please use Web3 enabled Browser (like Mist or Metamask Plugin)."
+        "Please use Web3 enabled Browser"
       );
     } else {
       // get web3 object (version 1.0)

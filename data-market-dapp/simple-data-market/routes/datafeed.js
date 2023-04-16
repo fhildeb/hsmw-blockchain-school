@@ -4,6 +4,8 @@ var router = express.Router();
 router.get("/", async function (req, res, next) {
   // connect to blockchain
   var Web3 = require("web3");
+
+  //TODO: Chance Blockchain Provider, default: Ganache Local Blockchain
   var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
 
   // load contract
