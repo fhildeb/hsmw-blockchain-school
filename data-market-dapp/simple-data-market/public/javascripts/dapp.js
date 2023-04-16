@@ -43,7 +43,7 @@ async function dapp() {
         $("#user").html(
           "<br>Active Account: " +
             userAccount +
-            "<br><button id='buy'>Buy Feed</button>"
+            "<br><br><button id='buy'>Buy Feed</button>"
         );
   
         // event handler for buy function
