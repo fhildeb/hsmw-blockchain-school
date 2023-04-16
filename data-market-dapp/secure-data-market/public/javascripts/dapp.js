@@ -36,7 +36,7 @@ async function dapp() {
             url +
             "?account=" +
             userAccount +
-            "' target='_blank'>" +
+            "' >" +
             url +
             "</a>"
         );
@@ -48,7 +48,7 @@ async function dapp() {
   
         // step 2
         $("#user").append(
-          "&nbsp;<button id='showFeed'>Show Feed with Authorization</button>"
+          "&nbsp;<button id='showFeed'>Show Feed with Authorization</button><br><br><div id='alert' style='display: none;'>Sign Functionality is disabled within browser. <br> Please activate signing in MetaMask.</div>"
         );
   
         // event handler for buy function
@@ -58,12 +58,42 @@ async function dapp() {
   
         // event handler for authorisation function
         $("#showFeed").click(async function () {
-          let msg = web3.utils.keccak256(Math.random().toString());
-          let sig = await web3.eth.sign(msg, userAccount);
-          window.open(
-            url + "?account=" + userAccount + "&msg=" + msg + "&sig=" + sig,
-            "_blank"
-          );
+          try{let msg = web3.utils.keccak256(Math.random().toString());
+            let sig = await web3.eth.sign(msg, userAccount);
+            document.getElementById("alert").style.display = "none"
+            
+            /*
+            old version, opening in new window
+            window.open(
+              url + "?account=" + userAccount + "&msg=" + msg + "&sig=" + sig
+            );*/
+            let url =
+    "/mydatafeed/?account=" +
+    userAccount +
+    "&msg=" +
+    msg +
+    "&sig=" +
+    sig;
+
+  fetch(url)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Failed to fetch data feed");
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      // update page with data
+      $("#content").html(JSON.stringify(data));
+    })
+    .catch(function (error) {
+      console.error(error);
+      $("#content").html("Failed to fetch data feed");
+    });
+          }catch(error){
+            document.getElementById("alert").style.display = "block"
+          }
+          
         });
       }
     }
