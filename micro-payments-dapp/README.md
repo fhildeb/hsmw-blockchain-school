@@ -21,15 +21,14 @@ Within the Payment Channel dApp, the data is directly written within the smart c
 ### Preparation
 
 1. Create Infura Account
-2. Set up an API key for Infura Ropsten
-3. Deploy related Contracts on Rposten
+2. Set up an API key for Infura Goerli Testnet
 
 ### Ajustments
 
 Search for `TODO:` and adjust:
 
 - Infura API Keys to your personal endpoint
-- EOA or Smart Contract addresses
+- EOA Admin addresses
 
 ### Installation
 
