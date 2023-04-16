@@ -250,12 +250,12 @@ router.get("/", function (req, res, next) {
       tkn = name;
     })
     .then(function () {
-      res.render("index", { title: "Hello World", block: blk, tokenname: tkn });
+      res.render("index", { title: "Token Viewer", block: blk, tokenname: tkn });
     })
     .catch(function (error) {
       console.log(error);
       res.render("index", {
-        title: "Hello World",
+        title: "Token Viewer",
         block: "konnte Block nicht laden",
       });
     });
