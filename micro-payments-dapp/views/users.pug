@@ -7,10 +7,10 @@ block content
     div(id='info')
     h1 Adminseite
     input(type='hidden' id='shash' value=shash)
-  
+
     if loggedin
       h3 Admin is loggedin.
-    
+
       h4 Open Channels
 
       if openChannels !== undefined
@@ -25,27 +25,27 @@ block content
             - n++
             tr
               each val2, index2 in val1
-  
+
                 if index2 == 'address'
                   td
                     a(href='https://ropsten.etherscan.io/address/' + val2 target='_blank')= val2
                     input(type='hidden' id= index2+'_'+n value= val2)
-                
+
                 if index2 == 'value' || index2 == 'used'
                   td= val2
                     input(type='hidden' id= index2+'_'+n value= val2)
-                
+
                 if index2 == 'sig'
                   td
                     input(type='hidden' id= index2+'_'+n value= val2)
                     button(id='checkSigButton_'+n) CheckSig
                   td
                     button(id='payRecipientButton_'+n) CloseChannel
-                    
+
             input(type='hidden' id= 'sender_'+n value= index)
         input(type='hidden' id='noChannels' value=n)
       hr
-      
+
       h4 Closed Channels
 
       if closedChannels !== undefined
@@ -63,6 +63,6 @@ block content
 
     else
       button(id='login') Login with Admin Account
-    
+
   script(src="/javascripts/users_client.js")
   script(src="/javascripts/channel_client.js")

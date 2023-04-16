@@ -7,14 +7,14 @@ block content
     div(id='info')
     h1 Payed Content Demo
     input(type='hidden' id='shash' value=shash size='64')
-  
+
   if loggedin==true
     input(type='hidden' id='user' value=user)
 
     if hasChannel!==undefined
       input(type='hidden' id='haschannel' value=hasChannel.address)
       input(type='hidden' id='used' value=hasChannel.used)
-  
+
     if payed==false
       input(type='hidden' id='price' value=price)
       div(id='payedcontent' style='border:2px solid;padding:10px') Content not yet payed.<br><br>
