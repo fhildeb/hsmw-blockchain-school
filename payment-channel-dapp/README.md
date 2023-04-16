@@ -6,6 +6,12 @@ The project is an Ethereum-based payment channel dApp interacting with the Ether
 
 Tickets form the basis for payment channels. Once connected to MetaMask, the user can create a signed ticket including the hash of the value being sent, the signature, and the value in Wei. Tickets can be seen as withdrawal permissions to guarantee the recipient that he can get money from the payment channel without having to carry out a paid transaction on the blockchain.
 
+![Payment Channel Creation](/img/payment-channel-dapp-1.png)
+
+> Tickets sent by the dApp can be checked against the contract address in RemixIDE using the _checkTicket_ function. If everything turns out as valid, the recipient can close the payment channel and will be paid out using the _payRecepient_ function with similar inputs.
+
+![Payment Channel Receipt](/img/payment-channel-dapp-2.png)
+
 ## Smart Contract
 
 > File: `PaymentChannel.sol`
@@ -21,8 +27,10 @@ Finally the channel sender is able to close the channel if the timeout duration 
 ### Preparation
 
 1. Create Infura Account
-2. Set up an API key for Infura Ropsten
-3. Deploy related Contracts on Rposten
+2. Set up an API key for Infura Goerli
+3. Deploy Payment Channel on Testnet
+
+> Goerli Payment Channel Contract: `0x10d64ff9CF17aA5178196536fE177276c6f6120a`
 
 ### Ajustments
 

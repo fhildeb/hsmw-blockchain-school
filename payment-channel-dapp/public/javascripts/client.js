@@ -1,13 +1,13 @@
 $(document).ready(function () {
   var account;
   if (typeof web3 !== 'undefined') {
-    $('#info').html('Ethereum Provider gefunden: ');
+    $('#info').html('Connected Ethereum Provider: ');
     web3 = new Web3(web3.currentProvider);
     // pruefung ob account verbunden
     web3.eth.getAccounts().then(function (accounts) {
       if (accounts.length > 0) {
         account = accounts[0];
-        $('#info').append(' ' + account + ' mit Dapp verknüpft');
+        $('#info').append('<br>' + account);
       } else {
         $('#info').append(
           '<span style="color:red"> Noch kein Account mit Dapp verknüpft. Melden Sie sich in Meta Mask an.</span>',
@@ -32,7 +32,7 @@ $(document).ready(function () {
       v = web3.utils.toDecimal(v);
       if (v == 0 || v == 1) v += 27;
       $('#ticketinfo').html(
-        '<h3>Signatur:</h3>_h: <input type="text" size="64" value="' +
+        '<h3>Signature:</h3>_h: <input type="text" size="64" value="' +
           msg +
           '"><br>_v: <input type="text" size="64" value="' +
           v +

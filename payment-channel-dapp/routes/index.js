@@ -93,8 +93,8 @@ var abi = [
     type: 'function',
   },
 ];
-// TODO: Ajust Address of Payment Channel Contract
-var address = '0x0000000000000000000000000000000000000000';
+// TODO: Ajust Address of Payment Channel Contract 
+var address = '0x10d64ff9CF17aA5178196536fE177276c6f6120a';
 var pc = new web3.eth.Contract(abi, address);
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -125,7 +125,7 @@ router.get('/', function (req, res, next) {
     .then(function (_timeout) {
       timeout = _timeout;
       res.render('index', {
-        title: 'Unidirectional Paymentchannel',
+        title: 'Payment Channel dApp',
         e: null,
         recipient: recipient,
         sender: sender,
@@ -136,7 +136,7 @@ router.get('/', function (req, res, next) {
     })
     .catch(function (error) {
       console.log('E');
-      res.render('index', { title: 'Paymentchannel dApp', e: error });
+      res.render('index', { title: 'Payment Channel dApp', e: error });
     });
 });
 module.exports = router;

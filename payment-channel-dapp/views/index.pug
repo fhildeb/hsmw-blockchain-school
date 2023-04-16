@@ -2,21 +2,21 @@ extends layout
 
 block content
   h1= title
-  div Payment Channel Daten
+  h3 Channel Data
   hr
-  div ChannelBalance: #{balance} Finney
-  div ChannelRecipient: #{recipient}
-  div ChannelSender: #{sender}
-  div ChannelStart: #{start}
-  div ChannelTimeout: #{timeout}
-  div Fehler: #{e}
+  div Balance: #{balance} Finney
+  div Recipient: #{recipient}
+  div Sender: #{sender}
+  div Start: #{start}
+  div Timeout: #{timeout}
+  div Issues: #{e}
   hr
   div(id='info')
   hr
-  h3 Abhebeerlaubniss:
-  div Betrag in Finney:
+  h3 Withdrawal Permission:
+  div Amount in Finney:
     input(id='value' type='text')
   p
   div
-    input(id='createSig' type='button' value='Signiere Abhebeerlaubniss')
+    input(id='createSig' type='button' value='Sign Withdrawal Permission')
   div(id='ticketinfo')
