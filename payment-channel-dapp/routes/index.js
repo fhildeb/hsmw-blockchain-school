@@ -93,8 +93,8 @@ var abi = [
     type: "function",
   },
 ];
-// TODO: Ajust Address
-var address = "0x...";
+// TODO: Ajust Address of Payment Channel Contract
+var address = "0x0000000000000000000000000000000000000000";
 var pc = new web3.eth.Contract(abi, address);
 /* GET home page. */
 router.get("/", function (req, res, next) {
