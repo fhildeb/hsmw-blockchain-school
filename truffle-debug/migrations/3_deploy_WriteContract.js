@@ -1,6 +1,5 @@
-var WriteContract = artifacts.require("./WriteContract.sol");
+var WriteContract = artifacts.require('./WriteContract.sol');
 
-module.exports = function(deployer)
-{
-    deployer.deploy(WriteContract);
+module.exports = function (deployer) {
+  deployer.deploy(WriteContract);
 };

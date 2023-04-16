@@ -1,13 +1,13 @@
-var DataMarket = artifacts.require("DataMarket");
+var DataMarket = artifacts.require('DataMarket');
 
-contract("Data Market Initialisation Test", function () {
+contract('Data Market Initialisation Test', function () {
   it("variable 'description' should be initialized 'leerer Feed'", function () {
     return DataMarket.deployed()
       .then(function (instance) {
         return instance.description.call();
       })
       .then(function (value) {
-        assert.equal(value, "leerer Feed");
+        assert.equal(value, 'leerer Feed');
       });
   });
 
@@ -17,7 +17,7 @@ contract("Data Market Initialisation Test", function () {
         return instance.url.call();
       })
       .then(function (value) {
-        assert.equal(value, "");
+        assert.equal(value, '');
       });
   });
 
@@ -41,6 +41,6 @@ contract("Data Market Initialisation Test", function () {
         .then(function (value) {
           assert.equal(value, web3.eth.accounts[4]);
         });
-    }
+    },
   );
 });

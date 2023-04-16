@@ -48,21 +48,14 @@
   "ast": {
     "absolutePath": "project:/contracts/WriteContract.sol",
     "exportedSymbols": {
-      "WriteContract": [
-        118
-      ]
+      "WriteContract": [118]
     },
     "id": 119,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 97,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".5"
-        ],
+        "literals": ["solidity", "^", "0.5", ".5"],
         "nodeType": "PragmaDirective",
         "src": "0:23:3"
       },
@@ -73,9 +66,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 118,
-        "linearizedBaseContracts": [
-          118
-        ],
+        "linearizedBaseContracts": [118],
         "name": "WriteContract",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -306,20 +297,13 @@
     "attributes": {
       "absolutePath": "project:/contracts/WriteContract.sol",
       "exportedSymbols": {
-        "WriteContract": [
-          118
-        ]
+        "WriteContract": [118]
       }
     },
     "children": [
       {
         "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.5",
-            ".5"
-          ]
+          "literals": ["solidity", "^", "0.5", ".5"]
         },
         "id": 97,
         "name": "PragmaDirective",
@@ -327,18 +311,12 @@
       },
       {
         "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
+          "baseContracts": [null],
+          "contractDependencies": [null],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            118
-          ],
+          "linearizedBaseContracts": [118],
           "name": "WriteContract",
           "scope": 119
         },
@@ -375,9 +353,7 @@
               "implemented": true,
               "isConstructor": true,
               "kind": "constructor",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "",
               "scope": 118,
               "stateMutability": "nonpayable",
@@ -387,9 +363,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 100,
@@ -398,9 +372,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 101,
@@ -425,9 +397,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 99,
                               "type": "string storage ref",
                               "value": "test"
@@ -479,9 +449,7 @@
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "changeWord",
               "scope": 118,
               "stateMutability": "nonpayable",
@@ -524,9 +492,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 111,
@@ -551,9 +517,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 99,
                               "type": "string storage ref",
                               "value": "test"
@@ -565,9 +529,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 109,
                               "type": "string memory",
                               "value": "newWord"

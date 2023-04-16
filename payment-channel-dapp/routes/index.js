@@ -1,103 +1,103 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var Web3JS = require("web3");
+var Web3JS = require('web3');
 var web3 = new Web3JS(
-// TODO: Adjust Infura Key
+  // TODO: Adjust Infura Key
   new Web3JS.providers.HttpProvider(
-    "https://ropsten.infura.io/<infura-api-key>"
-  )
+    'https://ropsten.infura.io/<infura-api-key>',
+  ),
 );
 var abi = [
   {
     constant: false,
     inputs: [],
-    name: "closeChannel",
+    name: 'closeChannel',
     outputs: [],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     constant: false,
     inputs: [
-      { name: "_h", type: "bytes32" },
-      { name: "_v", type: "uint8" },
-      { name: "_r", type: "bytes32" },
-      { name: "_s", type: "bytes32" },
-      { name: "_value", type: "uint256" },
+      { name: '_h', type: 'bytes32' },
+      { name: '_v', type: 'uint8' },
+      { name: '_r', type: 'bytes32' },
+      { name: '_s', type: 'bytes32' },
+      { name: '_value', type: 'uint256' },
     ],
-    name: "payRecipient",
+    name: 'payRecipient',
     outputs: [],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     inputs: [
-      { name: "_to", type: "address" },
-      { name: "_timeout", type: "uint256" },
+      { name: '_to', type: 'address' },
+      { name: '_timeout', type: 'uint256' },
     ],
     payable: true,
-    stateMutability: "payable",
-    type: "constructor",
+    stateMutability: 'payable',
+    type: 'constructor',
   },
   {
     constant: true,
     inputs: [],
-    name: "channelRecipient",
-    outputs: [{ name: "", type: "address" }],
+    name: 'channelRecipient',
+    outputs: [{ name: '', type: 'address' }],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "channelSender",
-    outputs: [{ name: "", type: "address" }],
+    name: 'channelSender',
+    outputs: [{ name: '', type: 'address' }],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "channelTimeout",
-    outputs: [{ name: "", type: "uint256" }],
+    name: 'channelTimeout',
+    outputs: [{ name: '', type: 'uint256' }],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [
-      { name: "_h", type: "bytes32" },
-      { name: "_v", type: "uint8" },
-      { name: "_r", type: "bytes32" },
-      { name: "_s", type: "bytes32" },
-      { name: "_value", type: "uint256" },
+      { name: '_h', type: 'bytes32' },
+      { name: '_v', type: 'uint8' },
+      { name: '_r', type: 'bytes32' },
+      { name: '_s', type: 'bytes32' },
+      { name: '_value', type: 'uint256' },
     ],
-    name: "checkTicket",
-    outputs: [{ name: "", type: "bool" }],
+    name: 'checkTicket',
+    outputs: [{ name: '', type: 'bool' }],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "startDate",
-    outputs: [{ name: "", type: "uint256" }],
+    name: 'startDate',
+    outputs: [{ name: '', type: 'uint256' }],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
 ];
 // TODO: Ajust Address of Payment Channel Contract
-var address = "0x0000000000000000000000000000000000000000";
+var address = '0x0000000000000000000000000000000000000000';
 var pc = new web3.eth.Contract(abi, address);
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get('/', function (req, res, next) {
   var balance;
   var recipient;
   var sender;
@@ -107,7 +107,7 @@ router.get("/", function (req, res, next) {
   web3.eth
     .getBalance(address)
     .then(function (_balance) {
-      balance = web3.utils.fromWei(_balance, "Finney");
+      balance = web3.utils.fromWei(_balance, 'Finney');
       return pc.methods.startDate().call();
     })
     .then(function (_start) {
@@ -124,8 +124,8 @@ router.get("/", function (req, res, next) {
     })
     .then(function (_timeout) {
       timeout = _timeout;
-      res.render("index", {
-        title: "Unidirectional Paymentchannel",
+      res.render('index', {
+        title: 'Unidirectional Paymentchannel',
         e: null,
         recipient: recipient,
         sender: sender,
@@ -135,8 +135,8 @@ router.get("/", function (req, res, next) {
       });
     })
     .catch(function (error) {
-      console.log("E");
-      res.render("index", { title: "Paymentchannel dApp", e: error });
+      console.log('E');
+      res.render('index', { title: 'Paymentchannel dApp', e: error });
     });
 });
 module.exports = router;

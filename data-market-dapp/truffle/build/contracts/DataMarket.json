@@ -166,21 +166,14 @@
   "ast": {
     "absolutePath": "project:/contracts/DataMarket.sol",
     "exportedSymbols": {
-      "DataMarket": [
-        121
-      ]
+      "DataMarket": [121]
     },
     "id": 122,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.4",
-          ".23"
-        ],
+        "literals": ["solidity", "^", "0.4", ".23"],
         "nodeType": "PragmaDirective",
         "src": "0:24:0"
       },
@@ -191,9 +184,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 121,
-        "linearizedBaseContracts": [
-          121
-        ],
+        "linearizedBaseContracts": [121],
         "name": "DataMarket",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -428,10 +419,7 @@
                       "id": 15,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        139,
-                        140
-                      ],
+                      "overloadedDeclarations": [139, 140],
                       "referencedDeclaration": 139,
                       "src": "249:7:0",
                       "typeDescriptions": {
@@ -1257,10 +1245,7 @@
                       "id": 90,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        139,
-                        140
-                      ],
+                      "overloadedDeclarations": [139, 140],
                       "referencedDeclaration": 139,
                       "src": "826:7:0",
                       "typeDescriptions": {
@@ -1599,20 +1584,13 @@
     "attributes": {
       "absolutePath": "project:/contracts/DataMarket.sol",
       "exportedSymbols": {
-        "DataMarket": [
-          121
-        ]
+        "DataMarket": [121]
       }
     },
     "children": [
       {
         "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.4",
-            ".23"
-          ]
+          "literals": ["solidity", "^", "0.4", ".23"]
         },
         "id": 1,
         "name": "PragmaDirective",
@@ -1620,18 +1598,12 @@
       },
       {
         "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
+          "baseContracts": [null],
+          "contractDependencies": [null],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            121
-          ],
+          "linearizedBaseContracts": [121],
           "name": "DataMarket",
           "scope": 122
         },
@@ -1794,9 +1766,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 14,
@@ -1815,9 +1785,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -1830,10 +1798,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                139,
-                                140
-                              ],
+                              "overloadedDeclarations": [139, 140],
                               "referencedDeclaration": 139,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -1872,9 +1837,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 136,
                                       "type": "msg",
                                       "value": "msg"
@@ -1891,9 +1854,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 3,
                                   "type": "address",
                                   "value": "owner"
@@ -1938,9 +1899,7 @@
               "documentation": null,
               "implemented": true,
               "isConstructor": true,
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "",
               "payable": false,
               "scope": 121,
@@ -2036,9 +1995,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 32,
@@ -2063,9 +2020,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 3,
                               "type": "address",
                               "value": "owner"
@@ -2089,9 +2044,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 136,
                                   "type": "msg",
                                   "value": "msg"
@@ -2131,9 +2084,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 9,
                               "type": "uint256",
                               "value": "price"
@@ -2145,9 +2096,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 30,
                               "type": "uint256",
                               "value": "_price"
@@ -2182,9 +2131,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 7,
                               "type": "string storage ref",
                               "value": "url"
@@ -2196,9 +2143,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 28,
                               "type": "string memory",
                               "value": "_url"
@@ -2233,9 +2178,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 5,
                               "type": "string storage ref",
                               "value": "description"
@@ -2247,9 +2190,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 26,
                               "type": "string memory",
                               "value": "_desc"
@@ -2327,9 +2268,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 57,
@@ -2344,9 +2283,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
+                      "overloadedDeclarations": [null],
                       "referencedDeclaration": 24,
                       "type": "modifier ()",
                       "value": "onlyOwner"
@@ -2378,9 +2315,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 5,
                               "type": "string storage ref",
                               "value": "description"
@@ -2392,9 +2327,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 53,
                               "type": "string memory",
                               "value": "_newDesc"
@@ -2472,9 +2405,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 69,
@@ -2489,9 +2420,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
+                      "overloadedDeclarations": [null],
                       "referencedDeclaration": 24,
                       "type": "modifier ()",
                       "value": "onlyOwner"
@@ -2523,9 +2452,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 9,
                               "type": "uint256",
                               "value": "price"
@@ -2537,9 +2464,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 65,
                               "type": "uint256",
                               "value": "_newPrice"
@@ -2617,9 +2542,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 81,
@@ -2634,9 +2557,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
+                      "overloadedDeclarations": [null],
                       "referencedDeclaration": 24,
                       "type": "modifier ()",
                       "value": "onlyOwner"
@@ -2668,9 +2589,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 7,
                               "type": "string storage ref",
                               "value": "url"
@@ -2682,9 +2601,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 77,
                               "type": "string memory",
                               "value": "_newUrl"
@@ -2719,9 +2636,7 @@
               "documentation": null,
               "implemented": true,
               "isConstructor": false,
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "buyData",
               "payable": true,
               "scope": 121,
@@ -2732,9 +2647,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 88,
@@ -2743,9 +2656,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 89,
@@ -2764,9 +2675,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -2779,10 +2688,7 @@
                                   "typeString": "bool"
                                 }
                               ],
-                              "overloadedDeclarations": [
-                                139,
-                                140
-                              ],
+                              "overloadedDeclarations": [139, 140],
                               "referencedDeclaration": 139,
                               "type": "function (bool) pure",
                               "value": "require"
@@ -2821,9 +2727,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 136,
                                       "type": "msg",
                                       "value": "msg"
@@ -2840,9 +2744,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 9,
                                   "type": "uint256",
                                   "value": "price"
@@ -2892,9 +2794,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 13,
                                   "type": "mapping(address => bool)",
                                   "value": "buyers"
@@ -2918,9 +2818,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 136,
                                       "type": "msg",
                                       "value": "msg"
@@ -2992,9 +2890,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 106,
@@ -3003,9 +2899,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 109,
@@ -3020,9 +2914,7 @@
                   {
                     "attributes": {
                       "argumentTypes": null,
-                      "overloadedDeclarations": [
-                        null
-                      ],
+                      "overloadedDeclarations": [null],
                       "referencedDeclaration": 24,
                       "type": "modifier ()",
                       "value": "onlyOwner"
@@ -3048,9 +2940,7 @@
                           "isPure": false,
                           "isStructConstructorCall": false,
                           "lValueRequested": false,
-                          "names": [
-                            null
-                          ],
+                          "names": [null],
                           "type": "tuple()",
                           "type_conversion": false
                         },
@@ -3075,9 +2965,7 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
+                                  "overloadedDeclarations": [null],
                                   "referencedDeclaration": 3,
                                   "type": "address",
                                   "value": "owner"
@@ -3111,9 +2999,7 @@
                                   "isPure": false,
                                   "isStructConstructorCall": false,
                                   "lValueRequested": false,
-                                  "names": [
-                                    null
-                                  ],
+                                  "names": [null],
                                   "type": "address",
                                   "type_conversion": true
                                 },
@@ -3140,9 +3026,7 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
+                                      "overloadedDeclarations": [null],
                                       "referencedDeclaration": 149,
                                       "type": "contract DataMarket",
                                       "value": "this"

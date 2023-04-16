@@ -1,31 +1,35 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var utils = require("ethereumjs-util");
+var utils = require('ethereumjs-util');
 
-router.get("/", async function (req, res, next) {
+router.get('/', async function (req, res, next) {
   try {
-  // connect to blockchain
-  var Web3 = require("web3");
-  var web3 = new Web3(new Web3.providers.WebsocketProvider("ws://127.0.0.1:7545"));
+    // connect to blockchain
+    var Web3 = require('web3');
+    var web3 = new Web3(
+      new Web3.providers.WebsocketProvider('ws://127.0.0.1:7545'),
+    );
 
-  // load contract
-  var fs = require("fs");
-  var contractData = JSON.parse(fs.readFileSync("public/contracts/DataMarket.json"));
-  var networkId = await web3.eth.net.getId();
-  var contractAddress = contractData.networks[networkId].address;
-  var contract = new web3.eth.Contract(contractData.abi, contractAddress);
+    // load contract
+    var fs = require('fs');
+    var contractData = JSON.parse(
+      fs.readFileSync('public/contracts/DataMarket.json'),
+    );
+    var networkId = await web3.eth.net.getId();
+    var contractAddress = contractData.networks[networkId].address;
+    var contract = new web3.eth.Contract(contractData.abi, contractAddress);
 
-  // check if account has paid
+    // check if account has paid
     var account = req.query.account;
 
     var accValid = await contract.methods.buyers(account).call();
     var sigValid = await checkSignature(account);
-    if (accValid && sigValid){
+    if (accValid && sigValid) {
       sendData();
     }
   } catch (e) {
     console.error(e);
-    res.status(500).send("You do not have access to this content page");
+    res.status(500).send('You do not have access to this content page');
   }
 
   // check if user owns account
@@ -52,7 +56,7 @@ router.get("/", async function (req, res, next) {
 
   function sendData() {
     data = { key: "Here's the secret blogpost" };
-    res.setHeader("Content-Type", "application/json");
+    res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(data));
   }
 });

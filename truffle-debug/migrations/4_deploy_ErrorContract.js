@@ -1,6 +1,5 @@
-var ErrorContract = artifacts.require("./ErrorContract.sol");
+var ErrorContract = artifacts.require('./ErrorContract.sol');
 
-module.exports = function(deployer)
-{
-    deployer.deploy(ErrorContract);
+module.exports = function (deployer) {
+  deployer.deploy(ErrorContract);
 };

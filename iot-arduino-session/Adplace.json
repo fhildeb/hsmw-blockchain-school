@@ -180,21 +180,14 @@
   "ast": {
     "absolutePath": "/vol/vol_home_staff/pgx-18/meisel/lx/Adplace/contracts/Adplace.sol",
     "exportedSymbols": {
-      "Adplace": [
-        122
-      ]
+      "Adplace": [122]
     },
     "id": 123,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.5", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
@@ -205,9 +198,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 122,
-        "linearizedBaseContracts": [
-          122
-        ],
+        "linearizedBaseContracts": [122],
         "name": "Adplace",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -570,10 +561,7 @@
                       "id": 27,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        197,
-                        198
-                      ],
+                      "overloadedDeclarations": [197, 198],
                       "referencedDeclaration": 197,
                       "src": "348:7:0",
                       "typeDescriptions": {
@@ -1327,10 +1315,7 @@
                       "id": 94,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        197,
-                        198
-                      ],
+                      "overloadedDeclarations": [197, 198],
                       "referencedDeclaration": 197,
                       "src": "776:7:0",
                       "typeDescriptions": {
@@ -1663,21 +1648,14 @@
   "legacyAST": {
     "absolutePath": "/vol/vol_home_staff/pgx-18/meisel/lx/Adplace/contracts/Adplace.sol",
     "exportedSymbols": {
-      "Adplace": [
-        122
-      ]
+      "Adplace": [122]
     },
     "id": 123,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".0"
-        ],
+        "literals": ["solidity", "^", "0.5", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:0"
       },
@@ -1688,9 +1666,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 122,
-        "linearizedBaseContracts": [
-          122
-        ],
+        "linearizedBaseContracts": [122],
         "name": "Adplace",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -2053,10 +2029,7 @@
                       "id": 27,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        197,
-                        198
-                      ],
+                      "overloadedDeclarations": [197, 198],
                       "referencedDeclaration": 197,
                       "src": "348:7:0",
                       "typeDescriptions": {
@@ -2810,10 +2783,7 @@
                       "id": 94,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        197,
-                        198
-                      ],
+                      "overloadedDeclarations": [197, 198],
                       "referencedDeclaration": 197,
                       "src": "776:7:0",
                       "typeDescriptions": {

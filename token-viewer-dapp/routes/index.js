@@ -1,12 +1,10 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
 
-var Web3JS = require("web3");
+var Web3JS = require('web3');
 var web3 = new Web3JS(
-    // TODO: Add Infura Key
-  new Web3JS.providers.HttpProvider(
-    "https://ropsten.infura.io/<INFURA_KEY>"
-  )
+  // TODO: Add Infura Key
+  new Web3JS.providers.HttpProvider('https://ropsten.infura.io/<INFURA_KEY>'),
 );
 
 var abi = [
@@ -14,229 +12,229 @@ var abi = [
     constant: false,
     inputs: [
       {
-        name: "_spender",
-        type: "address",
+        name: '_spender',
+        type: 'address',
       },
       {
-        name: "_value",
-        type: "uint256",
+        name: '_value',
+        type: 'uint256',
       },
     ],
-    name: "approve",
+    name: 'approve',
     outputs: [
       {
-        name: "success",
-        type: "bool",
+        name: 'success',
+        type: 'bool',
       },
     ],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     constant: false,
     inputs: [
       {
-        name: "_to",
-        type: "address",
+        name: '_to',
+        type: 'address',
       },
       {
-        name: "_value",
-        type: "uint256",
+        name: '_value',
+        type: 'uint256',
       },
     ],
-    name: "transfer",
+    name: 'transfer',
     outputs: [
       {
-        name: "success",
-        type: "bool",
+        name: 'success',
+        type: 'bool',
       },
     ],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     constant: false,
     inputs: [
       {
-        name: "_from",
-        type: "address",
+        name: '_from',
+        type: 'address',
       },
       {
-        name: "_to",
-        type: "address",
+        name: '_to',
+        type: 'address',
       },
       {
-        name: "_value",
-        type: "uint256",
+        name: '_value',
+        type: 'uint256',
       },
     ],
-    name: "transferFrom",
+    name: 'transferFrom',
     outputs: [
       {
-        name: "success",
-        type: "bool",
+        name: 'success',
+        type: 'bool',
       },
     ],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     inputs: [
       {
-        name: "_initialSupply",
-        type: "uint256",
+        name: '_initialSupply',
+        type: 'uint256',
       },
       {
-        name: "_name",
-        type: "string",
+        name: '_name',
+        type: 'string',
       },
       {
-        name: "_symbol",
-        type: "string",
+        name: '_symbol',
+        type: 'string',
       },
     ],
     payable: false,
-    stateMutability: "nonpayable",
-    type: "constructor",
+    stateMutability: 'nonpayable',
+    type: 'constructor',
   },
   {
     anonymous: false,
     inputs: [
       {
         indexed: true,
-        name: "_from",
-        type: "address",
+        name: '_from',
+        type: 'address',
       },
       {
         indexed: true,
-        name: "_to",
-        type: "address",
+        name: '_to',
+        type: 'address',
       },
       {
         indexed: false,
-        name: "_value",
-        type: "uint256",
+        name: '_value',
+        type: 'uint256',
       },
     ],
-    name: "Transfer",
-    type: "event",
+    name: 'Transfer',
+    type: 'event',
   },
   {
     anonymous: false,
     inputs: [
       {
         indexed: true,
-        name: "_owner",
-        type: "address",
+        name: '_owner',
+        type: 'address',
       },
       {
         indexed: true,
-        name: "_spender",
-        type: "address",
+        name: '_spender',
+        type: 'address',
       },
       {
         indexed: false,
-        name: "_value",
-        type: "uint256",
+        name: '_value',
+        type: 'uint256',
       },
     ],
-    name: "Approval",
-    type: "event",
+    name: 'Approval',
+    type: 'event',
   },
   {
     constant: true,
     inputs: [
       {
-        name: "",
-        type: "address",
+        name: '',
+        type: 'address',
       },
       {
-        name: "",
-        type: "address",
+        name: '',
+        type: 'address',
       },
     ],
-    name: "allowance",
+    name: 'allowance',
     outputs: [
       {
-        name: "",
-        type: "uint256",
+        name: '',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [
       {
-        name: "",
-        type: "address",
+        name: '',
+        type: 'address',
       },
     ],
-    name: "balanceOf",
+    name: 'balanceOf',
     outputs: [
       {
-        name: "",
-        type: "uint256",
+        name: '',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "name",
+    name: 'name',
     outputs: [
       {
-        name: "",
-        type: "string",
+        name: '',
+        type: 'string',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "symbol",
+    name: 'symbol',
     outputs: [
       {
-        name: "",
-        type: "string",
+        name: '',
+        type: 'string',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
   {
     constant: true,
     inputs: [],
-    name: "totalSupply",
+    name: 'totalSupply',
     outputs: [
       {
-        name: "",
-        type: "uint256",
+        name: '',
+        type: 'uint256',
       },
     ],
     payable: false,
-    stateMutability: "view",
-    type: "function",
+    stateMutability: 'view',
+    type: 'function',
   },
 ];
 
-var tokenAdress = "0x1225446678163b14859eed119831a68576fc15ae";
+var tokenAdress = '0x1225446678163b14859eed119831a68576fc15ae';
 var token = new web3.eth.Contract(abi, tokenAdress);
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get('/', function (req, res, next) {
   var blk;
   var tkn;
 
@@ -250,13 +248,17 @@ router.get("/", function (req, res, next) {
       tkn = name;
     })
     .then(function () {
-      res.render("index", { title: "Token Viewer", block: blk, tokenname: tkn });
+      res.render('index', {
+        title: 'Token Viewer',
+        block: blk,
+        tokenname: tkn,
+      });
     })
     .catch(function (error) {
       console.log(error);
-      res.render("index", {
-        title: "Token Viewer",
-        block: "konnte Block nicht laden",
+      res.render('index', {
+        title: 'Token Viewer',
+        block: 'konnte Block nicht laden',
       });
     });
 });

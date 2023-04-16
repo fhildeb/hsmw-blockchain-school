@@ -1,14 +1,14 @@
-var DataMarket = artifacts.require("DataMarket");
+var DataMarket = artifacts.require('DataMarket');
 
-contract("Data Market Buy Method Test", function () {
+contract('Data Market Buy Method Test', function () {
   var etherInContract;
   var etherInAccount;
   var gas;
   var contract;
-  var testDataPrice = web3.toWei(2, "finney");
-  var testGasPrice = web3.toWei(2, "Gwei");
+  var testDataPrice = web3.toWei(2, 'finney');
+  var testGasPrice = web3.toWei(2, 'Gwei');
 
-  it("sending the required amount of ether swiches entry in buyers mapping from false to true", function () {
+  it('sending the required amount of ether swiches entry in buyers mapping from false to true', function () {
     return DataMarket.deployed()
       .then(function (instance) {
         contract = instance;
@@ -57,18 +57,18 @@ contract("Data Market Buy Method Test", function () {
       });
   });
 
-  it("sending the required amount of ether increases the amount of ether in the contract by that number", function () {
+  it('sending the required amount of ether increases the amount of ether in the contract by that number', function () {
     assert.equal(
       etherInContract.plus(testDataPrice).toString(),
-      web3.eth.getBalance(contract.address).toString()
+      web3.eth.getBalance(contract.address).toString(),
     );
   });
 
-  it("sending the required amount of ether decreases the amount of ether in senders account by that number plus transaction costs", function () {
+  it('sending the required amount of ether decreases the amount of ether in senders account by that number plus transaction costs', function () {
     let trxCost = web3.toBigNumber(testGasPrice).times(gas);
     assert.equal(
       etherInAccount.minus(testDataPrice).minus(trxCost).toString(),
-      web3.eth.getBalance(web3.eth.accounts[5]).toString()
+      web3.eth.getBalance(web3.eth.accounts[5]).toString(),
     );
   });
 
@@ -85,7 +85,7 @@ contract("Data Market Buy Method Test", function () {
       })
       .then(function (value) {
         // assert that new test price differs from variable price in contract
-        let wrongTestPrice = web3.toWei(1, "finney");
+        let wrongTestPrice = web3.toWei(1, 'finney');
         assert.notEqual(wrongTestPrice, value.toString());
 
         // store amount of ether in contract before "buyData" is called
@@ -103,7 +103,7 @@ contract("Data Market Buy Method Test", function () {
       })
       .then(function () {
         // !Important! the test should never reach this line because the require line should throw an exception
-        assert.equal(1, 0, "Error: No Exception was thrown");
+        assert.equal(1, 0, 'Error: No Exception was thrown');
 
         // here is the error handler for the exception
       })
@@ -122,7 +122,7 @@ contract("Data Market Buy Method Test", function () {
   it("sending the wrong amount of ether doesn't increases the amount of ether in the contract by that number", function () {
     assert.equal(
       etherInContract.toString(),
-      web3.eth.getBalance(contract.address).toString()
+      web3.eth.getBalance(contract.address).toString(),
     );
   });
 
@@ -130,7 +130,7 @@ contract("Data Market Buy Method Test", function () {
     let trxCost = web3.toBigNumber(testGasPrice).times(gas);
     assert.equal(
       etherInAccount.minus(trxCost).toString(),
-      web3.eth.getBalance(web3.eth.accounts[6]).toString()
+      web3.eth.getBalance(web3.eth.accounts[6]).toString(),
     );
   });
 });

@@ -33,21 +33,14 @@
   "ast": {
     "absolutePath": "project:/contracts/FirstContract.sol",
     "exportedSymbols": {
-      "FirstContract": [
-        38
-      ]
+      "FirstContract": [38]
     },
     "id": 39,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 27,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".5"
-        ],
+        "literals": ["solidity", "^", "0.5", ".5"],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
       },
@@ -58,9 +51,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 38,
-        "linearizedBaseContracts": [
-          38
-        ],
+        "linearizedBaseContracts": [38],
         "name": "FirstContract",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -185,20 +176,13 @@
     "attributes": {
       "absolutePath": "project:/contracts/FirstContract.sol",
       "exportedSymbols": {
-        "FirstContract": [
-          38
-        ]
+        "FirstContract": [38]
       }
     },
     "children": [
       {
         "attributes": {
-          "literals": [
-            "solidity",
-            "^",
-            "0.5",
-            ".5"
-          ]
+          "literals": ["solidity", "^", "0.5", ".5"]
         },
         "id": 27,
         "name": "PragmaDirective",
@@ -206,18 +190,12 @@
       },
       {
         "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
+          "baseContracts": [null],
+          "contractDependencies": [null],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            38
-          ],
+          "linearizedBaseContracts": [38],
           "name": "FirstContract",
           "scope": 39
         },
@@ -254,9 +232,7 @@
               "implemented": true,
               "isConstructor": true,
               "kind": "constructor",
-              "modifiers": [
-                null
-              ],
+              "modifiers": [null],
               "name": "",
               "scope": 38,
               "stateMutability": "nonpayable",
@@ -266,9 +242,7 @@
             "children": [
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 30,
@@ -277,9 +251,7 @@
               },
               {
                 "attributes": {
-                  "parameters": [
-                    null
-                  ]
+                  "parameters": [null]
                 },
                 "children": [],
                 "id": 31,
@@ -304,9 +276,7 @@
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
+                              "overloadedDeclarations": [null],
                               "referencedDeclaration": 29,
                               "type": "string storage ref",
                               "value": "test"
