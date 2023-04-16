@@ -59,3 +59,6 @@ It utilizes the Johnny-Five library for Arduino communication, the Web3 library 
 
 1. Search for `TODO:` within the project and exchange your MetaMask address
 2. Install dependencies using `npm i` within the `iot-arduino-session` folder
+3. Start Arduino IDE and connect the microcontroller via USB cable
+4. Flash Arduino Firmware with `StandardFirmataPlus.ino`
+5. Run JavaScript files like `node adwatcher.js`
