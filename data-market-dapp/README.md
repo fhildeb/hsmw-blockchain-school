@@ -18,6 +18,38 @@ The Node.js web server delivers three pages, offering an overview of available d
 
 ## Tests
 
+> Tests and Deployment can be found within the `truffle` directory
+
 - `test_buy_method.js`: Tests the buy method of the DataMarket smart contract. It checks if the correct amount of Ether is sent, ensuring that the buyer's status is updated and that the contract balance and sender's account balance change accordingly. It also tests the behavior when an incorrect amount of Ether is sent.
 - `test_initialization.js`: Tests the initial state of the DataMarket smart contract, making sure that the variables are properly initialized, such as the description, URL, price, and contract owner.
 - `test_write_methods.js`: Tests the description method of the DataMarket smart contract. It verifies if the contract owner can successfully change the description and if a non-owner account is restricted from making any changes to the description.
+
+## Development
+
+> Projects can be found within `simple-data-market` or `secure-data-market` directories
+
+### Preparation
+
+1. Create Infura Account
+2. Set up an API key for Infura Ropsten
+
+### Ajustments
+
+Search for `TODO:` and adjust:
+
+- Infura API Keys to your personal endpoint
+- EOA or Smart Contract addresses
+
+### Installation
+
+```bash
+# Installs all packages
+npm i
+
+# Start script running node on/bin/www
+npm start
+```
+
+### View on Web
+
+Open http://localhost:3000/
