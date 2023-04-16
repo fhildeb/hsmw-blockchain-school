@@ -40,3 +40,7 @@ npm i
 # Start script running node on/bin/www
 npm start
 ```
+
+### View on Web
+
+Open http://localhost:3000/
