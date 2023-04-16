@@ -223,7 +223,7 @@ window.onload = function (e) {
   ];
 
   // TODO: Change token address to specific one
-  var tokenAdress = '0x0000000000000000000000000000000000000000';
+  var tokenAdress = '0xf408bC3B0Bb263589F71004F20DAF4aE63301417';
   var infoDiv = document.getElementById('info');
   var account;
 
@@ -238,29 +238,28 @@ window.onload = function (e) {
       .enable()
       .then((a) => {
         account = a[0];
-        infoDiv.innerHTML = '' + account + ' mit Dapp verknüpft';
+        infoDiv.innerHTML = 'Connected Account: <br> ' + account;
 
         // load token contract
         return loadContract(tokenAdress, abi);
       })
       .then((tokencontract) => {
-        // call method blanceOf from token contract
-        tokencontract.balanceOf(account, (e, balance) => {
-          console.log(balance.toString());
+        // call method balanceOf from token contract
+        tokencontract.methods.balanceOf(account).call((e, balance) => {
           infoDiv.innerHTML +=
-            '<br>Guthaben: ' + balance.toString() + ' Competence Token';
+            '<br>Balance: ' + balance.toString() + ' Token';
         });
-      });
+      });      
   } else {
     infoDiv.innerHTML =
       'Installieren Sie bitte <a href="https://metamask.io/">Meta Mask</a>.';
   }
 
   function loadContract(address, abi) {
-    var Contract = web3.eth.contract(abi);
-    var instance = Contract.at(address);
+    var contract = new web3.eth.Contract(abi, address);
     return new Promise((resolve, reject) => {
-      resolve(instance);
+      resolve(contract);
     });
   }
+  
 };

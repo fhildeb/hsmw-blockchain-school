@@ -230,7 +230,7 @@ var abi = [
   },
 ];
 
-var tokenAdress = '0x1225446678163b14859eed119831a68576fc15ae';
+var tokenAdress = '0xf408bC3B0Bb263589F71004F20DAF4aE63301417';
 var token = new web3.eth.Contract(abi, tokenAdress);
 
 /* GET home page. */
