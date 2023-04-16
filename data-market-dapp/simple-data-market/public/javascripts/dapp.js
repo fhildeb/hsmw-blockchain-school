@@ -36,7 +36,7 @@ async function dapp() {
             url +
             "?account=" +
             userAccount +
-            "' target='_blank'>" +
+            "'>" +
             url +
             "</a>"
         );
