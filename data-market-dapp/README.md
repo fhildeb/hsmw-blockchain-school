@@ -16,7 +16,7 @@ The Node.js web server delivers three pages, offering an overview of available d
 - `dapp_v2.js`: Updated version of `dapp.js` with a new feature: after the user buys the data feed, they have the option to access the data feed with authorization. It can generate a random message, signs it with the user's account, and opens the data feed URL in a new window with the user's account, signed message, and signature as URL parameters. This additional feature enhances the security of the data access, as it allows the data feed to verify the user's ownership of the connected account.
 - `datafeed_v2.js`: Updated version of `datafeed.js` with a new feature: It not only checks if the user has paid for access to the data feed, but also if they own the connected account by verifying the signature sent in the URL parameters. This is done using the check signature function. If both conditions are met, the data is sent to the user.
 
-## Tests
+## Tests & Deployment
 
 > Tests and Deployment can be found within the `truffle` directory
 
@@ -24,21 +24,47 @@ The Node.js web server delivers three pages, offering an overview of available d
 - `test_initialization.js`: Tests the initial state of the DataMarket smart contract, making sure that the variables are properly initialized, such as the description, URL, price, and contract owner.
 - `test_write_methods.js`: Tests the description method of the DataMarket smart contract. It verifies if the contract owner can successfully change the description and if a non-owner account is restricted from making any changes to the description.
 
+### Install Truffle
+
+```bash
+# Install Truffle
+npm install truffle -g
+```
+
+### Local Testchain
+
+Start Ganache on Chain ID 5777 or edit the development network config within `truffle-config.js`
+
+### Contract Deployment
+
+```bash
+# Check network deployments
+truffle networks
+
+# Deploy Contracts within migration scripts
+truffle deploy --network development
+```
+
+### Contract Testing
+
+```bash
+truffle test ./test/test_FirstContract.js
+```
+
 ## Development
 
 > Projects can be found within `simple-data-market` or `secure-data-market` directories
 
 ### Preparation
 
-1. Create Infura Account
-2. Set up an API key for Infura Ropsten
-
-### Ajustments
-
-Search for `TODO:` and adjust:
-
-- Infura API Keys to your personal endpoint
-- EOA or Smart Contract addresses
+1. Start Ganache
+2. Redeploy the contract in `truffle`
+3. Copy artifact from `truffle/build/contracts` to
+   - `basic-market-dapp/public/contracts`
+   - `secure-market-dapp/public/contracts`
+4. Import Deployment Account to MetaMask
+5. Set up Testnetwork (default 7575) in MetaMask
+6. Install dApps within project folders
 
 ### Installation
 
