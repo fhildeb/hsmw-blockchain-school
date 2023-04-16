@@ -15,3 +15,28 @@ The contract is an implementation of a unidirectional off-chain payment channel 
 The contract provides ticket checks, which verify the messages, funds, and signatures associated with a payment. It also allows the channel recipient to claim a payment. The recipient must provide a valid signed message, along with the value being transferred. If the ticket check returns true, the contract transfers the specified amount to the channel recipient, then closes the channel and sends any remaining funds back to the channel sender.
 
 Finally the channel sender is able to close the channel if the timeout duration has passed. It ensures that only the channel sender can close the channel and that the timeout condition is met. When the channel is closed, any remaining funds are sent back to the channel sender.
+
+## Development
+
+### Preparation
+
+1. Create Infura Account
+2. Set up an API key for Infura Ropsten
+3. Deploy related Contracts on Rposten
+
+### Ajustments
+
+Search for `TODO:` and adjust:
+
+- Infura API Keys to your personal endpoint
+- EOA or Smart Contract addresses
+
+### Installation
+
+```bash
+# Installs all packages
+npm i
+
+# Start script running node on/bin/www
+npm start
+```

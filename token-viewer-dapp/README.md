@@ -9,3 +9,27 @@ The application has a single HTML page to display the account address and the to
 ## ERC20 Integration
 
 The ABI of the ERC20 token smart contract and the contract address are defined within the dApp. The ABI contains the standard methods for interacting with ERC20 tokens, such as balanceOf, transfer, transferFrom, and approve. It also includes the name, symbol, and totalSupply methods to fetch the token's metadata.
+
+## Development
+
+### Preparation
+
+1. Create Infura Account
+2. Set up an API key for Infura Ropsten
+
+### Ajustments
+
+Search for `TODO:` and adjust:
+
+- Infura API Keys to your personal endpoint
+- EOA or Smart Contract addresses
+
+### Installation
+
+```bash
+# Installs all packages
+npm i
+
+# Start script running node on/bin/www
+npm start
+```
