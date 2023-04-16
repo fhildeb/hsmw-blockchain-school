@@ -125,7 +125,7 @@ router.get("/", function (req, res, next) {
     .then(function (_timeout) {
       timeout = _timeout;
       res.render("index", {
-        title: "Paymentchannel Demo",
+        title: "Unidirectional Paymentchannel",
         e: null,
         recipient: recipient,
         sender: sender,
@@ -136,7 +136,7 @@ router.get("/", function (req, res, next) {
     })
     .catch(function (error) {
       console.log("E");
-      res.render("index", { title: "Paymentchannel Demo", e: error });
+      res.render("index", { title: "Paymentchannel dApp", e: error });
     });
 });
 module.exports = router;

@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var account;
     if (typeof web3 !== "undefined") {
-      $("#info").html("Ethereum Provider gefunden.<br><br>");
+      $("#info").html("Ethereum Provider gefunden: ");
       web3 = new Web3(web3.currentProvider);
       // pruefung ob account verbunden
       web3.eth.getAccounts().then(function (accounts) {
